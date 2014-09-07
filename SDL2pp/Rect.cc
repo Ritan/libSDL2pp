@@ -65,6 +65,11 @@ Rect Rect::FromCenter(int cx, int cy, int w, int h) {
 	return Rect(cx - w/2, cy - h/2, w, h);
 }
 
+Rect Rect::FromLTRB( int x1, int y1, int x2, int y2 )
+{
+	return Rect( x1, y1, x2 - x1, y2 - y1 );
+}
+
 bool Rect::IsNull() const {
 	return !valid_;
 }

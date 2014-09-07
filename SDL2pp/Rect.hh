@@ -22,7 +22,11 @@
 #ifndef SDL2PP_RECT_HH
 #define SDL2PP_RECT_HH
 
-#include <SDL2/SDL_rect.h>
+#ifdef _MSC_VER
+#define noexcept
+#endif _MSC_VER
+
+#include <SDL_rect.h>
 
 struct SDL_Rect;
 
@@ -43,11 +47,12 @@ public:
 	static Rect Null();
 
 	static Rect FromCenter(int cx, int cy, int w, int h);
+	static Rect FromLTRB( int x1, int y1, int x2, int y2 );
 
 	Rect(const Rect&) noexcept = default;
-	Rect(Rect&&) noexcept = default;
+	Rect(Rect&&) noexcept;
 	Rect& operator=(const Rect&) noexcept = default;
-	Rect& operator=(Rect&&) noexcept = default;
+	Rect& operator=(Rect&&) noexcept;
 
 	bool operator==(const Rect& other) const;
 	bool operator!=(const Rect& other) const;

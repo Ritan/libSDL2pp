@@ -22,7 +22,11 @@
 #ifndef SDL2PP_POINT_HH
 #define SDL2PP_POINT_HH
 
-#include <SDL2/SDL_rect.h>
+#include <SDL_rect.h>
+
+#ifdef _MSC_VER
+#define noexcept
+#endif _MSC_VER
 
 namespace SDL2pp {
 
@@ -41,9 +45,9 @@ public:
 	static Point Null();
 
 	Point(const Point&) noexcept = default;
-	Point(Point&&) noexcept = default;
+	Point(Point&&) noexcept;
 	Point& operator=(const Point&) noexcept = default;
-	Point& operator=(Point&&) noexcept = default;
+	Point& operator=(Point&&) noexcept;
 
 	bool operator==(const Point& other) const;
 	bool operator!=(const Point& other) const;

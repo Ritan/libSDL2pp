@@ -22,10 +22,14 @@
 #ifndef SDL2PP_TEXTURE_HH
 #define SDL2PP_TEXTURE_HH
 
+#ifdef _MSC_VER
+#define noexcept
+#endif _MSC_VER
+
 #include <string>
 
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_blendmode.h>
+#include <SDL_stdinc.h>
+#include <SDL_blendmode.h>
 
 #include <SDL2pp/Config.hh>
 

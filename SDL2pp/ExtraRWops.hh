@@ -39,7 +39,7 @@ public:
 
 	ContainerRWops(const ContainerRWops<C>&) = default;
 	ContainerRWops& operator=(const ContainerRWops<C>&) = delete;
-	ContainerRWops(ContainerRWops<C>&&) noexcept = default;
+	ContainerRWops(ContainerRWops<C>&&) noexcept;
 	ContainerRWops& operator=(ContainerRWops<C>&&) = delete;
 
 	virtual Sint64 Seek(Sint64 offset, int whence) override {
@@ -100,7 +100,7 @@ public:
 
 	ConstContainerRWops(const ConstContainerRWops<C>&) = default;
 	ConstContainerRWops& operator=(const ConstContainerRWops<C>&) = delete;
-	ConstContainerRWops(ConstContainerRWops<C>&&) noexcept = default;
+	ConstContainerRWops(ConstContainerRWops<C>&&) noexcept;
 	ConstContainerRWops& operator=(ConstContainerRWops<C>&&) = delete;
 
 	virtual Sint64 Seek(Sint64 offset, int whence) override {
