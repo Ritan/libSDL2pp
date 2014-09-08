@@ -64,6 +64,13 @@ Texture::Texture(Texture&& other) noexcept : texture_(other.texture_) {
 	other.texture_ = nullptr;
 }
 
+Texture::Texture( Renderer& renderer, SDL_Surface * surface )
+{
+	if ( ( texture_ = SDL_CreateTextureFromSurface( renderer.Get(), surface )) == nullptr )
+		 throw Exception( "SDL_CreateTextureFromSurface failed" );
+}
+
+
 Texture& Texture::operator=(Texture&& other) noexcept {
 	texture_ = other.texture_;
 	other.texture_ = nullptr;

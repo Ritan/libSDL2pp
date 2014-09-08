@@ -39,6 +39,7 @@ public:
 	Uint32 WasInit(Uint32 flags);
 	void InitSubSystem(Uint32 flags);
 	void QuitSubSystem(Uint32 flags);
+	static void Delay(Uint32 ms);
 };
 
 }

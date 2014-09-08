@@ -35,6 +35,12 @@ SDL::~SDL() {
 	SDL_Quit();
 }
 
+void SDL::Delay(Uint32 ms)
+{
+	SDL_Delay( ms );
+}
+
+
 Uint32 WasInit(Uint32 flags) {
 	return SDL_WasInit(flags);
 }

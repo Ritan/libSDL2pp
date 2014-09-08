@@ -47,6 +47,7 @@ private:
 
 public:
 	Texture(Renderer& renderer, Uint32 format, int access, int w, int h);
+	Texture( Renderer& renderer, SDL_Surface * surface );
 #ifdef SDL2PP_WITH_IMAGE
 	Texture(Renderer& renderer, RWops& rwops);
 	Texture(Renderer& renderer, const std::string& filename);

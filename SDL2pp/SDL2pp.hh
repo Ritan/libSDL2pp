@@ -38,4 +38,10 @@
 #include <SDL2pp/RWops.hh>
 #include <SDL2pp/ExtraRWops.hh>
 
+#ifdef SDL2PP_WITH_TTF
+	#include "SDL_ttf.hh"
+	#include "Font.hh"
+	#include "Text.hh"
+#endif
+
 #endif
