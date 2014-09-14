@@ -27,10 +27,6 @@
 #include <SDL_rwops.h>
 #include <SDL2pp/Exception.hh>
 
-#ifdef _MSC_VER
-#define noexcept
-#endif _MSC_VER
-
 /*
  * This looks quite complicated, but it's needed to both retain
  * compatibility with C SDL and make it possible to write pure C++
@@ -120,5 +116,5 @@ public:
 };
 
 }
-#undef noexcept
+
 #endif

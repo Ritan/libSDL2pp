@@ -28,10 +28,6 @@
 #include <SDL2pp/Point.hh>
 #include <SDL2pp/Rect.hh>
 
-#ifdef _MSC_VER
-#define noexcept
-#endif _MSC_VER
-
 struct SDL_RendererInfo;
 struct SDL_Renderer;
 
@@ -101,5 +97,4 @@ public:
 
 }
 
-#undef noexcept
 #endif

@@ -71,5 +71,5 @@ public:
 };
 
 }
-#undef noexcept
+
 #endif

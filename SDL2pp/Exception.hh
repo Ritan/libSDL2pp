@@ -43,5 +43,5 @@ public:
 };
 
 }
-#undef noexcept
+
 #endif
