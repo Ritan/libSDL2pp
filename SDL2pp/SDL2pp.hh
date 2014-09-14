@@ -22,10 +22,6 @@
 #ifndef SDL2PP_SDL2PP_HH
 #define SDL2PP_SDL2PP_HH
 
-#ifdef _MSC_VER
-#define noexcept
-#endif _MSC_VER
-
 #include <SDL2pp/Exception.hh>
 #include <SDL2pp/Config.hh>
 

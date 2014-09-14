@@ -82,5 +82,5 @@ public:
 };
 
 }
-
+#undef noexcept
 #endif

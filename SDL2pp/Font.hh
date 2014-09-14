@@ -3,6 +3,10 @@
 #include <string>
 #include "SDL2pp/RWops.hh"
 
+#ifdef _MSC_VER
+#define noexcept
+#endif _MSC_VER
+
 namespace SDL2pp
 {
 	class Font
@@ -11,7 +15,7 @@ namespace SDL2pp
 		virtual ~Font();
 
 		Font( const Font& other ) = delete;
-		Font( Font&& other ) noexcept;
+		Font( Font&& other ) ;
 		Font& operator=( const Font& other ) = delete;
 		Font& operator=( Font&& other ) noexcept;
 
@@ -50,3 +54,5 @@ namespace SDL2pp
 		TTF_Font * m_font;
 	};
 }
+
+#undef noexcept

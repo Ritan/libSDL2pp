@@ -28,6 +28,10 @@
 
 #include <SDL2pp/Point.hh>
 
+#ifdef _MSC_VER
+#define noexcept
+#endif _MSC_VER
+
 struct SDL_Window;
 
 namespace SDL2pp {
@@ -55,5 +59,5 @@ public:
 };
 
 }
-
+#undef noexcept
 #endif

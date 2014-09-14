@@ -25,6 +25,10 @@
 #include <SDL2pp/RWops.hh>
 #include <SDL2pp/Exception.hh>
 
+#ifdef _MSC_VER
+#define noexcept
+#endif _MSC_VER
+
 namespace SDL2pp {
 
 template<typename C>
@@ -144,5 +148,7 @@ public:
 };
 
 }
+
+#undef noexcept
 
 #endif
