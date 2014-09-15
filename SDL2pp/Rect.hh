@@ -22,10 +22,6 @@
 #ifndef SDL2PP_RECT_HH
 #define SDL2PP_RECT_HH
 
-#ifdef _MSC_VER
-#define noexcept
-#endif _MSC_VER
-
 #include <SDL_rect.h>
 
 struct SDL_Rect;

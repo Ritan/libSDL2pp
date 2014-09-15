@@ -24,10 +24,6 @@
 
 #include <SDL_rect.h>
 
-#ifdef _MSC_VER
-#define noexcept
-#endif _MSC_VER
-
 namespace SDL2pp {
 
 class Point {

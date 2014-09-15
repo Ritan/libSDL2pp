@@ -24,10 +24,6 @@
 
 #include <exception>
 
-#ifdef _MSC_VER
-#define noexcept
-#endif _MSC_VER
-
 namespace SDL2pp {
 
 class Exception : public std::exception {
