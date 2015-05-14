@@ -176,7 +176,7 @@ namespace SDL2pp
 
 	int Font::SizeUNICODE( std::u16string& text, int &w, int &h )
 	{
-		int res = TTF_SizeUNICODE( m_font, text.c_str(), &w, &h );
+		int res = TTF_SizeUNICODE( m_font, (Uint16*)text.c_str(), &w, &h );
 		if ( res == -1 )
 		{
 			throw Exception( "TTF_SizeUNICODE failed" );
